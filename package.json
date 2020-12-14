@@ -1,0 +1,13 @@
+{
+  "name": "simple-sdk-s3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.809.0",
+    "dotenv": "^8.2.0"
+  }
+}
