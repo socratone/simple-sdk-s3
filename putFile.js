@@ -12,7 +12,7 @@ const putFile = (file, key) => {
   const upload = new AWS.S3.ManagedUpload({
     params: {
       Bucket: process.env.AWS_S3_BUCKET_NAME,
-      Key: key,
+      Key: key, // 저장될 이름, 경로 포함
       Body: fs.createReadStream(file),
       ACL: 'public-read'
     }
