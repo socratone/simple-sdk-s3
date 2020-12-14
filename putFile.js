@@ -22,7 +22,7 @@ const putFile = (path, name) => {
   
   promise.then(
     function(data) {
-      console.log("Successfully uploaded photo.");
+      console.log("Successfully uploaded file.");
     },
     function(err) {
       return console.log("There was an error uploading your photo: ", err.message);
