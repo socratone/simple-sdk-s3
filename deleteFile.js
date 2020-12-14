@@ -9,10 +9,10 @@ const s3 = new AWS.S3({
 const deleteFile = key => {
   s3.deleteObject({ Key: key }, function(err, data) {
     if (err) {
-      return console.log("There was an error deleting your photo: ", err.message);
+      return console.log("There was an error deleting your file: ", err.message);
     }
-    console.log("Successfully deleted photo.");
+    console.log("Successfully deleted file.");
   });
 }
 
-deleteFile('item/sample.png');
+deleteFile('sample.png');
