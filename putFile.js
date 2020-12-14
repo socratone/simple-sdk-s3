@@ -2,12 +2,13 @@ require('dotenv').config();
 const fs = require('fs');
 const AWS = require('aws-sdk');
 
+AWS.config.update({
+  region: 'ap-northeast-2',
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.AWS_SECRET_ACCESS_KEY,
+}); 
+
 const putFile = (file, key) => {
-  AWS.config.update({
-    region: 'ap-northeast-2',
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.AWS_SECRET_ACCESS_KEY,
-  }); 
   
   const upload = new AWS.S3.ManagedUpload({
     params: {
