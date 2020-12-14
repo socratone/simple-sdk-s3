@@ -14,7 +14,7 @@ const putFile = (path, name) => {
       Bucket: process.env.AWS_S3_BUCKET_NAME,
       Key: name,
       Body: fs.createReadStream(path),
-      ACL: "public-read"
+      ACL: 'public-read'
     }
   });
   
@@ -22,10 +22,10 @@ const putFile = (path, name) => {
   
   promise.then(
     function(data) {
-      console.log("Successfully uploaded file.");
+      console.log('Successfully uploaded file.');
     },
     function(err) {
-      return console.log("There was an error uploading your photo: ", err.message);
+      return console.log('There was an error uploading your photo: ', err.message);
     }
   );
 }
